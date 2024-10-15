@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="http://localhost/DIY_Project_sharing_platform/CSS/registration_css.CSS">
+	<script>
+        function validateForm() 
+        {
+            var fullName = document.getElementById("first_Name").value;
+            var mobile = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("con_password").value;
+            var dob = document.getElementById("DOB").value;
+
+            // Validate Passwords match
+            if (password != confirmPassword)
+            {
+                alert("Password and confirm password do not match");
+                return false;
+            }
+            
+            // Validate mobile number
+            if (isNaN(mobile) || mobile.length != 10)
+            {
+                alert("Please enter a valid mobile number");
+                return false;
+            }
+
+            // Validate email format
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            // Validate date of birth (must be 13 years or older)
+            var today = new Date();
+            var birthDate = new Date(dob);
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var monthDifference = today.getMonth() - birthDate.getMonth();
+            
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            if (age < 13) {
+                alert("You must be at least 13 years old to register.");
+                return false;
+            }
+
+            return true; 
+        }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="homepage.html"><img src="http://localhost/DIY_Project_sharing_platform/IMAGES/file2.png" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Home_page.html">Home</a></li>
+            <li><a href="http://localhost/DIY_Project_sharing_platform/HTML/Regitration.html">Register</a></li>
+            <li><a href="http://localhost/DIY_Project_sharing_platform/HTML/Login_page.html">Login</a></li>
+            <li><a href="http://localhost/DIY_Project_sharing_platform/HTML/Login_page.html">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <form id="registrationForm" action="/DIY_Project_sharing_platform/PHP/registration.php" method="POST" onsubmit="return validateForm()">
+		<h2>Registration</h2>
+
+        <label for="firstName">First Name</label>
+        <input type="text" name="first_name" id="first_Name"><br><br>
+
+        <label for="lname">Last Name</label>
+        <input type="text" name="last_name" id="last_Name"><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"><br><br>
+
+        <label for="DOB">DOB</label>
+        <input type="date" name="DOB" id="DOB"><br><br>
+
+        <label for="phone">Ph no</label>
+        <input type="tel" name="phone" id="phone"><br><br>
+
+        <label>Sex</label>
+        <input type="radio" name="sex" value="male" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="sex" value="female" id="female">
+        <label for="female">Female</label><br><br>
+
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username"><br><br>
+
+        <label for="password">Password</label>
+        <input type="password" name="user_password" id="password"><br><br>
+
+        <label for="confirmpwd">Confirm password</label>
+        <input type="password" name="con_password" id="con_password"><br><br>
+
+        <h4>Qualification</h4>
+        <input type="checkbox" name="qualification[]" value="SSLC" id="qualification1">
+        <label for="SSLC">SSLC</label>
+        <input type="checkbox" name="qualification[]" value="PLUS_TWO" id="qualification2">
+        <label for="PLUS_TWO">PLUS TWO</label>
+        <input type="checkbox" name="qualification[]" value="UG" id="qualification3">
+        <label for="UG">UG</label>
+        <input type="checkbox" name="qualification[]" value="PG" id="qualification4">
+        <label for="PG">PG</label><br><br>
+
+        <label for="experience">Experience</label>
+        <textarea rows="5" cols="40" name="experience" id="experience"></textarea><br><br><br><br>
+
+        <center><input type="reset" value="reset"></center>&nbsp;&nbsp;
+        <center><input type="submit" value="submit"></center>
+    </form>
+    
+</body>
+</html>

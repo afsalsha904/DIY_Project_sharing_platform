@@ -1,0 +1,150 @@
+body
+{
+    background-color: white;
+}
+/* Style for the dashboard container */
+.dashboard-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    display: flex;
+    background: url('http://localhost/DIY_Project_sharing_platform/IMAGES/img2.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    position: relative;
+    /* border-radius: 1cm; */
+    background-color: rgb(28, 21, 156);
+    color-scheme: dark;
+    
+}
+
+/* Style for the left-side menu */
+.left-menu {
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 1cm;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin-top: 50px; /* Move menu items downward */
+    font-size: 20px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.75);
+    margin-left: 25px;
+    margin-bottom: 50px;
+}
+
+/* Style for the right content block */
+.right-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Style for menu items */
+.menu-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Align text and icon vertically */
+    
+}
+  /* Style for the icon */
+.menu-icon {
+    margin-right: 10px; /* Add space between icon and text */
+    text-decoration: none;
+    color: black;
+}
+
+/* Style for the heading bar */
+.heading-bar {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 1cm;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.75); /* Add margin to create space below the heading bar */
+}
+
+/* Style for the subtitle */
+.subtitle {
+    font-size: 24px;
+    margin-bottom: 20px; /* Add margin to separate subtitle from menu items */
+}
+.content
+{
+    text-align: center;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+}
+.image {
+    width: 50px; /* Set the width of the image to 200 pixels */
+    height: 10px; /* Set the height of the image to 150 pixels */
+}
+a {
+    text-decoration: none;
+    color: black;
+    text-decoration-color: black;
+}
+.card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    color:#000000;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin:0 auto;
+  }
+  
+  .icon {
+    background-color: #4410d4;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .icon i {
+    font-size: 24px;
+    color: #fdfdfd;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  p {
+    margin: 5px 0 0;
+    color: #f9f1f1;
+    font-size: 40px;
+  }
+  .progress-container {
+    text-align: center;
+    color:#f2f2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .progress-bar {
+    width: 35%;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin:0 auto;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #328335;
+  }

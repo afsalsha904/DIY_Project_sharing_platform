@@ -1,0 +1,146 @@
+/* reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* basic styles for the body and container */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-weight: bold;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    justify-content: center;
+    align-items: right;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* heading styles */
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* form group styles */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  input[type="text"],
+  textarea,select,
+  input[type="date"] {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    background-color:  rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 150px;
+    width: 100%;
+    padding: 10px; /* allow vertical resizing */
+  }
+  
+  input[type="file"] {
+    margin-top: 5px; /* space between file inputs */
+  }
+  
+  button[type="submit"] {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #347fe1;
+  }
+  
+  /* responsive adjustments */
+  @media screen and (max-width: 600px) {
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  .form-select {
+    margin-bottom: 20px; /* add some space between form elements */
+  }
+  
+  .form-select label {
+    display: block; /* make label a block element */
+    margin-bottom: 10px; /* add some space between label and select */
+    font-weight: bold; /* make label text bold */
+  }
+  
+  .form-select select {
+    width: 100%; /* make select element full width */
+    padding: 10px; /* add some padding to select element */
+    border: 1px solid #ccc; /* add a border to select element */
+    border-radius: 5px; /* add a slight border radius to select element */
+  }
+  
+  .form-select select:focus {
+    border-color: #aaa; /* change border color on focus */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a slight box shadow on focus */
+  }
+  .form-image {
+    margin-bottom: 20px; /* add some space between form elements */
+    display: flex; /* make the image and input file elements inline */
+    flex-wrap: wrap; /* wrap the elements to the next line if necessary */
+    align-items: center; /* vertically center the elements */
+  }
+  
+  .form-image img {
+    margin-right: 20px; /* add some space between the image and input file */
+    border: 1px solid #ccc; /* add a border to the image */
+    border-radius: 5px; /* add a slight border radius to the image */
+  }
+  
+  .form-image label {
+    margin-bottom: 10px; /* add some space between the label and input file */
+    font-weight: bold; /* make label text bold */
+  }
+  
+  .form-image input[type="file"] {
+    padding: 10px; /* add some padding to the input file */
+    border: 1px solid #ccc; /* add a border to the input file */
+    border-radius: 5px; /* add a slight border radius to the input file */
+  }
+  
+  .form-image input[type="file"]:focus {
+    border-color: #aaa; /* change border color on focus */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a slight box shadow on focus */
+  }
+  

@@ -1,0 +1,162 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170vh;
+    /* background-color: #f5f5f5; */
+    font-size: large;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    
+
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+
+}
+
+h2 {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: auto;
+    font-weight: bold;
+}
+textarea
+{
+    height: 150px;
+    width: 100%;
+    padding: 10px;
+    background-color:  rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+
+input[type="text"], input[type="email"], input[type="date"], input[type="tel"], input[type="password"]
+{
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    background-color:  rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+    
+}
+
+input[type="submit"] {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="submit"]:hover {
+    background-color: #347fe1;
+}
+
+center {
+    display: flex;
+    justify-content: center;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="reset"] 
+{
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #000000;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="reset"]:hover 
+{
+    background-color: #e4e1e1;
+}
+
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Increased padding to 20px for better spacing */
+    width: 100%;
+    position: fixed;
+    top: 0; /* Position at the top */
+    z-index: 1000; /* Ensure it's above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+}
+
+.logo {
+    margin-right: 20px; /* Added margin to separate logo from nav links */
+}
+
+.logo img {
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px; /* Reduced margin to 20px for better spacing */
+}
+
+.nav-links li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.nav-links li a:hover {
+    background-color: #d6d6d6;
+    border-radius: 5px;
+}

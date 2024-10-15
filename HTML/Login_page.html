@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0093E9;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 5px;
+            width: 100%;
+            position: fixed; /* Fixed positioning */
+            top: 0; /* Position at the top */
+            z-index: 1000; /* Ensure it's above other content */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+        }
+
+        .container {
+            height: 450px;
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            height: 50px;
+            width: 100%;
+            padding: 10px;
+            background-color:  rgba(255, 255, 255, 0.7);
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            height: 50px;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: solid;
+        }
+
+        .register{
+        color: #007bff;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .register-link:hover {
+            text-decoration: solid;
+        }
+        a {
+        text-decoration: none;
+        color: black;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+.nav-links li {
+            margin-left: 40px;
+        }
+
+.nav-links li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.nav-links li a:hover {
+    background-color: #d6d6d6;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="homepage.html"><img src="http://localhost/DIY_Project_sharing_platform/IMAGES/file2.png" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Home_page.html">Home</a></li>
+            <li><a href="http://localhost/DIY_Project_sharing_platform/HTML/Regitration.html">Register</a></li>
+            <li><a href="http://localhost/DIY_Project_sharing_platform/HTML/Login_page.html">Login</a></li>
+            <li><a href="http://localhost/DIY_Project_sharing_platform/HTML/Login_page.html">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Login</h1><br/><br/>
+        <form action="/DIY_Project_sharing_platform/PHP/login.php" method="POST">
+          <label for="username">&nbspUsername</label>
+            <input type="text" id="username" name="username"><br/><br/>
+
+            <label for="user_password">&nbspPassword</label>
+            <input type="password" id="user_password" name="user_password"><br/><br/>
+
+            <input type="submit" value="Login"><br/><br/><br/>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a><br/>
+        </div>
+        <div class="register-link">
+            Don't have an account? <a class="register" href="http://localhost/DIY_Project_sharing_platform/HTML/Regitration.html">Register</a>
+        </div>
+    </div>
+</body>
+</html>

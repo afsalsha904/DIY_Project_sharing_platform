@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <script src="http://localhost/DIY_Project_sharing_platform/JS/home_page.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="http://localhost/DIY_Project_sharing_platform/CSS/Home_page_css.CSS">
+</head>
+<body>
+    
+    
+	<nav class="navbar">
+		<div class="logo">
+			<a href="homepage.html"><img src="http://localhost/DIY_Project_sharing_platform/IMAGES/file2.png" alt="Logo"></a>
+		</div>
+		<form action="http://localhost/DIY_Project_sharing_platform/PHP/search.php" method="GET" class="search-form">
+			<input type="text" name="query" placeholder="Search..." required>
+			<button type="submit">Search</button>
+		</form>
+		<ul class="nav-links">
+			<li><a href="Home_page.html">Home</a></li>
+			<li><a href="http://localhost/DIY_Project_sharing_platform/HTML/Regitration.html">Register</a></li>
+			<li><a href="http://localhost/DIY_Project_sharing_platform/HTML/Login_page.html">Login</a></li>
+			
+			<li class="dropdown">
+				<span onclick="toggleDropdown2()">Projects</span>
+				<ul id="f" class="dropdown-content">
+					<li><a href="http://localhost/DIY_Project_sharing_platform/PHP/By_category.php">By Category</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="http://localhost/DIY_Project_sharing_platform/HTML/contact_us.html">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<script>
+		function toggleDropdown2() {
+			var dropdown = document.getElementById("f");
+			if (dropdown.style.display === "none" || dropdown.style.display === "") {
+				dropdown.style.display = "block";
+			} else {
+				dropdown.style.display = "none";
+			}
+		}
+	
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+			if (!event.target.matches('.dropdown span')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				for (var i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.style.display === "block") {
+						openDropdown.style.display = "none";
+					}
+				}
+			}
+		}
+	</script>
+	
+
+
+	<div class="slider">
+		<div class="slides">
+			<input type="radio" name="radio-btn" id="radio1">
+			<input type="radio" name="radio-btn" id="radio2">
+			<input type="radio" name="radio-btn" id="radio3">
+	
+			<div class="slide">
+				<img src="http://localhost/DIY_Project_sharing_platform/IMAGES/handislider.jpg" alt="Image 1">
+			</div>
+			<div class="slide">
+				<img src="http://localhost/DIY_Project_sharing_platform/IMAGES/paperslider.jpg" alt="Image 2">
+			</div>
+			<div class="slide">
+				<img src="http://localhost/DIY_Project_sharing_platform/IMAGES/woodslider.jpeg"  alt="Image 3">
+			</div>
+		</div>
+	
+		<div class="navigation-auto">
+			<div class="auto-btn1"></div>
+			<div class="auto-btn2"></div>
+			<div class="auto-btn3"></div>
+		</div>
+	
+		<div class="navigation-manual">
+			<label for="radio1" class="manual-btn"></label>
+			<label for="radio2" class="manual-btn"></label>
+			<label for="radio3" class="manual-btn"></label>
+		</div>
+	</div>
+	
+	<script>
+		// JavaScript for automatic and manual slider navigation
+		const slides = document.querySelectorAll('.slide');
+		const autoNavButtons = document.querySelectorAll('.navigation-auto div');
+		const manualNavButtons = document.querySelectorAll('.navigation-manual label');
+	
+		let currentSlide = 0;
+		const slideInterval = 3000; // Change slides every 5 seconds
+	
+		// Function to reset all slides
+		function resetSlides() {
+			slides.forEach(slide => {
+				slide.style.display = 'none';
+			});
+			autoNavButtons.forEach(button => {
+				button.classList.remove('active');
+			});
+			manualNavButtons.forEach(button => {
+				button.classList.remove('active');
+			});
+		}
+	
+		// Function to start auto slide show
+		function startSlideShow() {
+			resetSlides();
+			slides[currentSlide].style.display = 'block';
+			autoNavButtons[currentSlide].classList.add('active');
+			manualNavButtons[currentSlide].classList.add('active');
+			currentSlide++;
+			if (currentSlide === slides.length) {
+				currentSlide = 0;
+			}
+			setTimeout(startSlideShow, slideInterval);
+		}
+	
+		// Initial call to start the slide show
+		startSlideShow();
+	
+		// Manual navigation with radio buttons
+		manualNavButtons.forEach((button, index) => {
+			button.addEventListener('click', () => {
+				currentSlide = index;
+				resetSlides();
+				slides[currentSlide].style.display = 'block';
+				autoNavButtons[currentSlide].classList.add('active');
+				manualNavButtons[currentSlide].classList.add('active');
+			});
+		});
+	</script>
+
+
+
+
+		<div class="additional-block">
+			<div class="block-heading">
+				<h2>DIY-Project Sharing platform</h2>
+				<p>A DIY project sharing platform is an online community where individuals can share, discover, and collaborate on do-it-yourself projects.
+				Users can upload step-by-step tutorials, videos, and photos of their DIY endeavors, ranging from home improvement and crafting to cooking and gardening. 
+				The platform often includes features such as user comments, ratings, and forums for discussion and feedback. It serves as a hub for creative inspiration and
+				practical guidance, enabling users to learn new skills, exchange ideas, and showcase their handiwork with a like-minded community..</p>
+			</div>
+
+
+
+	<div class="three-columns">
+        <div class="column">
+			<a href="http://localhost/DIY_Project_sharing_platform/PHP/By_category.php">
+            <img src="http://localhost/DIY_Project_sharing_platform/IMAGES/woodcraft.jpg" alt="Image 1">
+		</a>
+            <h3>Woodcraft</h3>
+            <p>Woodcraft is the art and skill of creating objects, structures, and artwork using wood as the primary material.
+			It involves various techniques such as carving, shaping, joining, and finishing wood to craft a wide range of items including furniture, decorative pieces,
+			utensils, and more. Woodcraft combines creativity, craftsmanship, and knowledge of wood properties to produce unique and functional pieces that showcase
+			the natural beauty and versatility of wood. It is a traditional craft that has been practiced for centuries and continues to be appreciated for its aesthetic
+			appeal and practical utility.</p>
+        </div>
+        <div class="column">
+			<a href="http://localhost/DIY_Project_sharing_platform/PHP/By_category.php">
+            <img src="http://localhost/DIY_Project_sharing_platform/IMAGES/pappercraft.jpg" alt="Image 2">
+		</a>
+            <h3>Pappercraft</h3>
+            <p>Papercraft is the art of creating three-dimensional objects and designs using paper. This craft involves cutting, folding, and gluing paper to construct 
+			intricate models, sculptures, and decorative items. Papercraft is a versatile and accessible form of art that can range from simple origami figures to complex
+			architectural models. It is a popular hobby enjoyed by people of all ages and skill levels, often requiring only basic materials such as paper, scissors, and 
+			adhesive. Papercraft allows for creativity and precision, resulting in stunning and detailed creations that showcase the versatility of paper as a medium.</p>
+        </div>
+        <div class="column">
+			<a href="http://localhost/DIY_Project_sharing_platform/PHP/By_category.php">
+            <img src="http://localhost/DIY_Project_sharing_platform/IMAGES/homedecor.jpg" alt="Image 3">
+		</a>
+            <h3>HomeDecor</h3>
+            <p>Home decor refers to the art of enhancing and beautifying living spaces through the use of decorative elements, furnishings, and accessories. 
+			It involves selecting and arranging furniture, lighting, textiles, artwork, and other items to create a cohesive and visually appealing environment that 
+			reflects the homeowner's personal style and taste. Home decor can encompass a wide range of design styles, from modern and minimalist to eclectic and 
+			traditional. By carefully curating and arranging decor elements, homeowners can transform their living spaces into inviting, comfortable, and aesthetically 
+			pleasing environments that suit their lifestyle and preferences..</p>
+        </div>
+    </div>
+
+	<div class="one-columns">
+        <div class="column">
+            <h3>INSTRUCTIONS:</h3>
+            <p>1. Sign Up/Log In: If you're not already a member, sign up for an account on the DIY project sharing platform. If you're a returning user, log in to your account.<br>
+
+				2. Create a Project: Look for an option to create or upload a new project. Provide a title, description, and any necessary details about your project. You may also be able to upload images, videos, or documents to showcase your project.<br>
+				
+				3. Categorize Your Project: Choose the appropriate category or tags for your project to help other users find it easily. This could include categories like woodworking, home decor, electronics, gardening, etc.<br>
+				
+				4. Add Instructions: If your project requires instructions, provide a step-by-step guide or list of materials needed. This will help others understand how to replicate your project.<br>
+				
+				5. Share Your Project: Once your project is uploaded and complete, share it with the community. Some platforms may have social sharing options to post your project on other platforms like Facebook, Twitter, or Pinterest.<br>
+				
+				
+				</p>
+        </div>
+
+		<div class="four-columns">
+			<div class="column">
+				<h3><i class="fas fa-trash"></i>Trash</h3>
+				<p>'Trash' feature allows users to temporarily store deleted files or projects before permanently removing them</p>
+				<img src="http://localhost/DIY_Project_sharing_platform/IMAGES/trash.jpg" alt="Image 1">
+			</div>
+			<div class="column">
+				<h3><i class="fas fa-heart"></i>Review</h3>
+				<p> Your input helps us improve and evolve, ensuring that we continue to provide valuable and relevant services to our community</p>
+				<img src="http://localhost/DIY_Project_sharing_platform/IMAGES/review.jpg" alt="Image 2">
+			</div>
+			<div class="column">
+				<h3><i class="fas fa-cog"></i>Settings</h3>
+				<p>In the settings section of our project sharing platform, users can customize their profile, adjust privacy settings, 
+				manage notifications, and configure preferences to tailor their experience to their needs</p>
+				<img src="http://localhost/DIY_Project_sharing_platform/IMAGES/settings2.jpg" alt="Image 3">
+			</div>
+			<div class="column">
+				<h3><i class="fas fa-star"></i>Rating</h3>
+				<p> Ratings enable creators to receive recognition for their work and improve their skills based on community feedback. .</p>
+				<img src="http://localhost/DIY_Project_sharing_platform/IMAGES/rating.jpg" alt="Image 4" >
+			</div>
+		</div>
+		<a href="#" class="read-more" data-toggle="collapse" data-target="#read-more-content">Go to top</a>
+	</div>
+	<footer id="contact">
+		<div class="footer-column">
+			<div class="footer-content">
+				<h3>Contact Us</h3>
+				<p>Address: 2nd street Broadway, Ernakulam, Kerala, India</p>
+				<p>Email: diyproejctsharingplatform@gmail.com</p>
+			</div>
+		</div>
+		<div class="footer-column">
+			<div class="footer-links">
+				<h3>Menu</h3>
+				<a href="index.html">Home</a>
+				<a href="http://localhost/DIY_Project_sharing_platform/HTML/Regitration.html">Register</a>
+				<a href="http://localhost/DIY_Project_sharing_platform/HTML/Login_page.html">Login</a>
+				<a href="#contact">Gallery</a>
+				<a href="#contact">Contact</a>
+			</div>
+		</div>
+		<div class="footer-column">
+			<div class="footer-links">
+				<h3>Useful Links</h3>
+				<a href="privacy.html">Privacy Policy</a>
+				<a href="terms.html">Terms of Service</a>
+				<a href="faq.html">FAQ</a>
+				<a href="support.html">Support</a>
+			</div>
+		</div>
+	</footer>
